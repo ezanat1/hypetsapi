@@ -11,22 +11,24 @@ import json
 # filename = 'Facts/cats.txt'
 
 
-myList = []
+
   
 # creating dictionary
 
 def openAndConvert(filename):
     with open(filename) as fh:
         ct = 0
-
+        myList = []
         for line in fh:
             dict1 = {}
             dict1.update({"fact":(line)})
             myList.append(dict1)
+            ct +=1
 
     # out_file = open("test1.json", "w")
     # json.dump(myList, out_file, indent = 4, sort_keys = False)
     # out_file.close()
+    print(ct)
     return myList
 
 
